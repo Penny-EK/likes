@@ -24,18 +24,29 @@
 
 // OPG 2
 
-// let likes = 0;
+function knap() {
+  document.querySelector("body").innerHTML += `  <button class="button">❤️ Like</button>`;
 
-// document.querySelectorAll(".button").forEach((button) => {
-//   button.addEventListener("click", click);
-// });
+  let likes = 0;
 
-// function click() {
-//   console.log("knap klik");
-//   likes++;
-//   console.log(likes, this);
-//   this.textContent = `❤️ ${likes} Like`;
-//   if (likes > 1) {
-//     this.textContent = `❤️ ${likes} Likes`;
-//   }
+  document.querySelectorAll(".button").forEach((button) => {
+    button.addEventListener("click", click);
+  });
+
+  function click() {
+    console.log("knap klik");
+    likes++;
+    console.log(likes, this);
+    this.textContent = `❤️ ${likes} Like`;
+    if (likes > 1) {
+      this.textContent = `❤️ ${likes} Likes`;
+    }
+  }
+
+  //   add();
+}
+knap();
+// function add() {
+//   console.log("add");
+
 // }
